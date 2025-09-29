@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HSG Fanshop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <h1>HSG Rü/Bau/Kö <br> Fanshop</h1>
+</header>
 
+<section>
+  <h2>Unsere Fanartikel</h2>
+  <div class="products">
+    <!-- Beispiel Fantrikot -->
+    <div class="product">
+      <img src="img/Fantrikot1.png" alt="Fantrikot" onclick="openLightbox(this)">
+      <img src="img/Fantrikot2.png" alt="Fantrikot Rückseite" onclick="openLightbox(this)">
+      <h3>HSG Fantrikot</h3>
+      <p>Original HSG Fantrikot in Vereinsfarben.</p>
+      <p><strong>24,90 €</strong></p>
+      <select id="size-trikot">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+      <button onclick="addToCart('HSG Fantrikot', 24.90, document.getElementById('size-trikot').value)">In den Warenkorb</button>
+    </div>
+  </div>
+</section>
+
+<div id="lightbox" onclick="closeLightbox()"><img id="lightbox-img"></div>
+
+<script src="js/fanshop.js"></script>
+</body>
+</html>
